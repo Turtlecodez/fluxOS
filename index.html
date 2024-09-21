@@ -3,21 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="index.js"></script>
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <img id="search" style="height: 38px; position: fixed; bottom: 5px; left: 5px; z-index: 2;" src="launcher.png">
+        <img id="search" style="height: 38px; position: fixed; bottom: 5px; left: 5px; z-index: 2;" src="./assets/app-icons/launcher.png">
         <div class="taskbar">
-            <img id="files" class="app-icon" style="padding-top: 8px;" src="files.png">
-            <img id="chrome" class="app-icon" src="chrome.png">
-            <img id="settings" class="app-icon" src="settings.png">
+            <img id="files" class="app-icon" src="./assets/app-icons/files.png">
+            <img id="chrome" class="app-icon" src="./assets/app-icons/chrome.png">
+            <img id="settings" class="app-icon" src="./assets/app-icons/settings.png">
         </div>
         <div class="far-right-taskbar">
+            <p id="time"></p>
+            <img id="wifi-icon" src="" alt="Wi-Fi Strength">
+            <img id="battery-icon" src="" alt="Battery Level">
         </div>
         <div class="right-taskbar">
+            <p id="date"></p>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>
