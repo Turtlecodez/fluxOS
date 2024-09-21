@@ -33,7 +33,7 @@ body {
   }
 
 .far-right-taskbar {
-    background-color: #4e5059
+    background-color: #4e5059;
     position: fixed;
     bottom: 4;
     right: 4;
