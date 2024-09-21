@@ -10,7 +10,14 @@ body {
     background-size: 100% 100%
 }
 
-.block {
+.app-icon {
+    height: 34px;
+    align-self: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.taskbar {
     position: fixed;
     align-items: center;
     bottom: 0;
@@ -25,6 +32,11 @@ body {
     border-top-left-radius: 24px;
   }
 
-  .taskbar-icon {
-    object-fit: contain;
-  }
+.far-right-taskbar {
+    background-color: #4e5059
+    position: fixed;
+    bottom: 4;
+    right: 4;
+    height: 40px;
+    width: 10%;
+}
