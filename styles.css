@@ -33,13 +33,14 @@ body {
   }
 
 .far-right-taskbar {
-    background-color: #202124;
+    background-color: #656566;
     position: fixed;
     bottom: 4px;
     right: 4px;
     height: 40px;
     width: 10%;
-    border-top-right-radius: 40px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
