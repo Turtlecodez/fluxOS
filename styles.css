@@ -35,9 +35,9 @@ body {
 .far-right-taskbar {
     background-color: #373f4b;
     position: fixed;
-    bottom: 4px;
-    right: 4px;
-    height: 40px;
+    bottom: 5px;
+    right: 5px;
+    height: 38px;
     width: 10%;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
