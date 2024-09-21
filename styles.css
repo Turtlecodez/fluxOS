@@ -32,6 +32,16 @@ body {
     border-top-left-radius: 24px;
   }
 
+.right-taskbar {
+    background-color: #373f4b;
+    position: fixed;
+    bottom: 5px;
+    right: calc(5px + 10%);
+    height: 38px;
+    width: 5%;
+    border-radius: 5px;
+}
+
 .far-right-taskbar {
     background-color: #373f4b;
     position: fixed;
