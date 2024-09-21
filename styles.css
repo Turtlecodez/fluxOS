@@ -35,8 +35,8 @@ body {
 .far-right-taskbar {
     background-color: #4e5059;
     position: fixed;
-    bottom: 4;
-    right: 4;
+    bottom: 4px;
+    right: 4px;
     height: 40px;
     width: 10%;
 }
