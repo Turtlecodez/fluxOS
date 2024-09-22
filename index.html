@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <img id="search" style="height: 38px; position: fixed; bottom: 5px; left: 5px; z-index: 4;" src="./assets/app-icons/launcher.png">
+        <div class="taskbar" style="z-index: 3;">
+            <img id="files" class="app-icon" style="z-index: 4;" src="./assets/app-icons/files.png">
+            <img id="chrome" class="app-icon" style="z-index: 4;" src="./assets/app-icons/chrome.png">
+            <img id="settings" class="app-icon" style="z-index: 4;" src="./assets/app-icons/settings.png">
+        </div>
+
+        <div class="far-right-taskbar" style="z-index: 4;">
+            <p id="time"></p>
+            <img id="wifi-icon" style="z-index: 5;" src="" alt="Wi-Fi Strength">
+            <img id="battery-icon" style="z-index: 5;" src="" alt="Battery Level">
+        </div>
+
+        <div class="right-taskbar" style="z-index: 4;">
+            <p id="date" style="z-index: 5;" ></p>
+        </div>
+        
+        <div id="chrome-bar" style="display: none; height: 20px; width: 100%; justify-content: center; background-color: rgb(65, 65, 65);">
+            <img id="x-icon" src="./assets/x_icon.png" style="display: none; width: 16px; height: 16px; float: right; transform: translate(-50%, 10%);">
+            <img id="minimize" src="./assets/minimize.png" style="display: none; width: 16px; height: 16px; float: right; transform: translate(-90%, 15%);">
+        </div>
+
+        <div id="wah" style="width: 100%; height: calc(100vh - 68px);">
+            <iframe id="chrome-window" scrolling="no" style="z-index: 2; overflow-y: hidden; height: calc(100vh - 68px); border: none; padding: 0px; margin: 0px; width: 100%; display: none;" src="https://doge-v4-jade.vercel.app" alt="browser"></iframe>
+        </div>
+
+        <script src="index.js"></script>
+        <script src="chrome.js"></script>
+
+    </body>
+</html>
