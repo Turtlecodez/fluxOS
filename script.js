@@ -5,10 +5,6 @@ document.getElementById('settings').addEventListener('click', openSettings);
 document.getElementById('settings-x-icon').addEventListener('click', closeSettings);
 document.getElementById('settings-minimize').addEventListener('click', minimizeSettings);
 
-document.addEventListener("DOMContentLoaded", function(e) {
-    myTimeout = setTimeout(openSettings, 100);
-});
-
 document.getElementById('file-input').addEventListener('change', function (event) {
     const file = event.target.files[0];
     if (file) {
