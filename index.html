@@ -25,17 +25,37 @@
             <p id="date" style="z-index: 5;" ></p>
         </div>
         
-        <div id="chrome-bar" style="display: none; height: 20px; width: 100%; justify-content: center; background-color: rgb(65, 65, 65);">
+        <div id="chrome-bar" style="z-index: 2; display: none; height: 20px; width: 100%; justify-content: center; background-color: rgb(65, 65, 65);  z-index: 2;">
             <img id="x-icon" src="./assets/x_icon.png" style="display: none; width: 16px; height: 16px; float: right; transform: translate(-50%, 10%);">
             <img id="minimize" src="./assets/minimize.png" style="display: none; width: 16px; height: 16px; float: right; transform: translate(-90%, 15%);">
         </div>
 
-        <div id="wah" style="width: 100%; height: calc(100vh - 68px);">
-            <iframe id="chrome-window" scrolling="no" style="z-index: 2; overflow-y: hidden; height: calc(100vh - 68px); border: none; padding: 0px; margin: 0px; width: 100%; display: none;" src="https://doge-v4-jade.vercel.app" alt="browser"></iframe>
+               
+
+        <div id="window-1" style="width: 100%; height: calc(100vh - 68px);">
+            <iframe id="chrome-window" scrolling="no" style="background-color: white; z-index: 2; overflow-y: hidden; height: calc(100vh - 68px); border: none; padding: 0px; margin: 0px; width: 100%; display: none;" src="https://proccy-finder.vercel.app/" alt="browser"></iframe>
+        </div>
+
+        <div id="window-2" style="width: 100%; height: calc(100vh - 68px);">
+            <div id="settings-window">
+                <div id="settings-bar">
+                    <img id="settings-x-icon" src="./assets/x_icon.png">
+                    <img id="settings-minimize" src="./assets/minimize.png" style="display: none; width: 16px; height: 16px; float: right; transform: translate(-90%, 15%);">
+                </div>
+                <div id="settings-options-background" style="background-color: #16181c; border-radius: 20px; z-index: 2; width: 80%; height: calc(80% - 88px);  float: right; transform: translate(-10px, 50px);">
+                    <p style="padding-top: 5px; padding-left: 30px; color: #aec6ff; font-family: Roboto; z-index: 3;">Device</p>
+                    <div style="background-color: #21232a; border-radius: 10px; width: calc(100% - 40px); transform: translate(20px, 0px); height: 100px; z-index: 3;">
+                        <p id="settings-text-1">Set Custom Wallpaper</p>
+                        <div id="set-custom-wallpaper">
+                            <input style="transform: translateX(30px);" type="file" id="file-input" accept="image/*">
+                        </div>
+                        <span style="display: block; height: 1px; width: 100%; background-color: #45474d;"></span>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script src="index.js"></script>
-        <script src="chrome.js"></script>
 
     </body>
 </html>
