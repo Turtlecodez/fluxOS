@@ -1,6 +1,63 @@
 document.getElementById('chrome').addEventListener('click', openChrome);
 document.getElementById('x-icon').addEventListener('click', closeChrome);
 document.getElementById('minimize').addEventListener('click', minimizeChrome);
+document.getElementById('settings').addEventListener('click', openSettings);
+document.getElementById('settings-x-icon').addEventListener('click', closeSettings);
+document.getElementById('settings-minimize').addEventListener('click', minimizeSettings);
+
+document.addEventListener("DOMContentLoaded", function(e) {
+    myTimeout = setTimeout(openSettings, 100);
+});
+
+document.getElementById('file-input').addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            document.body.style.backgroundImage = `url('${e.target.result}')`;
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundPosition = 'center';
+            document.body.style.backgroundRepeat = 'no-repeat';
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+function openSettings() {
+    const settingsWindow = document.getElementById('settings-window');
+    const settingsBar = document.getElementById('settings-bar');
+    const settingsXIcon = document.getElementById('settings-x-icon');
+    const settingsMinimize = document.getElementById('settings-minimize');
+
+    settingsWindow.style.display = 'block';
+    settingsBar.style.display = 'block';
+    settingsXIcon.style.display = 'block';
+    settingsMinimize.style.display = 'block';
+}
+
+function closeSettings() {
+    const settingsWindow = document.getElementById('settings-window');
+    const settingsBar = document.getElementById('settings-bar');
+    const settingsXIcon = document.getElementById('settings-x-icon');
+    const settingsMinimize = document.getElementById('settings-minimize');
+
+    settingsWindow.style.display = 'none';
+    settingsBar.style.display = 'none';
+    settingsXIcon.style.display = 'none';
+    settingsMinimize.style.display = 'none';
+}
+
+function minimizeSettings() {
+    const settingsWindow = document.getElementById('settings-window');
+    const settingsBar = document.getElementById('settings-chrome-bar');
+    const settingsXIcon = document.getElementById('settings-x-icon');
+    const settingsMinimize = document.getElementById('settings-minimize');
+
+    settingsWindow.style.display = 'block';
+    settingsBar.style.display = 'block';
+    settingsXIcon.style.display = 'block';
+    settingsMinimize.style.display = 'block';
+}
 
 function openChrome() {
     const chromeWindow = document.getElementById('chrome-window');
@@ -10,7 +67,7 @@ function openChrome() {
 
     chromeWindow.style.display = 'block';
     chromeBar.style.display = 'block';
-    xIcon.style.display = 'block'
+    xIcon.style.display = 'block';
     minimize.style.display = 'block';
 }
 
@@ -20,14 +77,14 @@ function closeChrome() {
     const xIcon = document.getElementById('x-icon');
     const minimize = document.getElementById('minimize');
 
-    chromeWindow.src = "https://google.com/"
-    
+    chromeWindow.src = "./styles.css";
+
     chromeWindow.style.display = 'none';
     chromeBar.style.display = 'none';
-    xIcon.style.display = 'none'
+    xIcon.style.display = 'none';
     minimize.style.display = 'none';
 
-    chromeWindow.src = "https://doge-v4-jade.vercel.app/"
+    chromeWindow.src = "https://proccy-finder.vercel.app/";
 }
 
 function minimizeChrome() {
@@ -38,7 +95,7 @@ function minimizeChrome() {
 
     chromeWindow.style.display = 'none';
     chromeBar.style.display = 'none';
-    xIcon.style.display = 'none'
+    xIcon.style.display = 'none';
     minimize.style.display = 'none';
 }
 
@@ -67,7 +124,6 @@ function timeAndDate() {
 
     getWifiStrength();
 }
-
 
 function updateBatteryIcon(level) {
     const batteryIcon = document.getElementById("battery-icon");
@@ -108,7 +164,5 @@ function getWifiStrength() {
     }
 }
 
-
 timeAndDate();
-
 setInterval(timeAndDate, 1000);
